@@ -55,11 +55,11 @@ mae_1 = mean_absolute_error(predictions_1,y_valid) # Your code here
 print("Mean Absolute Error:" , mae_1)
 
 # Define the model
-my_model_2 = XGBRegressor(n_estimators = 500, learning_rate=0.05) # Your code here
+my_model_2 = XGBRegressor(n_estimators = 300, learning_rate=0.05) # Your code here
 
 # Fit the model
 my_model_2.fit(X_train, y_train,
-              early_stopping_rounds = 10,
+              early_stopping_rounds = 7,
               eval_set = [(X_valid, y_valid)],
               verbose=False) # Your code here
 
